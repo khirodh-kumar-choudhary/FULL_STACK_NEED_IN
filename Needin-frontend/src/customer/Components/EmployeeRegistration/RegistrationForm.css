@@ -1,0 +1,56 @@
+/* RegistrationForm.css */
+
+.container {
+  border: 2px solid #007bff; /* Blue border color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding inside the container */
+  max-width: 600px; /* Max width */
+  margin: auto; /* Center the form */
+  margin-top: 5px;
+}
+
+.Needin {
+  display: block;
+  margin-left: px;
+}
+
+.form-group {
+  margin-bottom: 5px; /* Space between form groups */
+}
+
+.form-group label {
+  display: flex; /* Make label take the full width, aligning text to the left */
+  margin-bottom: 5px; /* Space between label and input */
+  color: #000; /* Label text color */
+}
+
+.form-control {
+  width: 100%; /* Full width */
+  padding: 5px; /* Padding */
+  margin-bottom: 5px; /* Margin bottom */
+  display: inline-block; /* Displaying properly */
+  border: 1px solid #ccc; /* Adding a border */
+  background: #f1f1f1; /* Light grey background */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.form-control:focus {
+  background-color: #ddd; /* Darker grey on focus */
+  outline: none; /* Remove outline */
+  border-color: #007bff; /* Highlight with border color on focus */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  padding: 10px 10px; /* Padding */
+  margin: 5px 0; /* Margin */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 100%; /* Full width */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.btn-primary:hover {
+  opacity: 0.8; /* Slightly fade on hover */
+}

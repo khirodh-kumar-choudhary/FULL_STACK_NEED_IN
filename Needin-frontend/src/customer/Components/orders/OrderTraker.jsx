@@ -8,11 +8,11 @@ import { Typography} from '@mui/material';
 
 
 const steps = [
-  "Placed",
-  'Order Confirmed',
-  'Shipped',
-  'Out For Delivery',
-  'Delivered'
+  "Service order placed",
+  'Service Confirmed',
+  'Employee on the Way',
+  'Service Completed',
+  'Service Cancelled'
 ];
 
 

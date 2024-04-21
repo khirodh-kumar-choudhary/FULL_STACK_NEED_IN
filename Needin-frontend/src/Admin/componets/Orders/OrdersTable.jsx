@@ -83,7 +83,7 @@ const OrdersTable = () => {
   const handleShippedOrder = (orderId,index) => {
     handleUpdateStatusMenuClose(index);
     dispatch(shipOrder(orderId))
-    setOrderStatus("ShIPPED")
+    setOrderStatus("REJECTED")
   };
 
   const handleDeliveredOrder = (orderId,index) => {
@@ -256,13 +256,13 @@ const OrdersTable = () => {
                       >
                         <MenuItem
                           onClick={() => handleConfirmedOrder(item.id, index)}
-                          disabled={item.orderStatus==="DELEVERED" || item.orderStatus==="SHIPPED" || item.orderStatus==="CONFIRMED"}
+                          disabled={item.orderStatus==="DELEVERED" || item.orderStatus==="REJECTED" || item.orderStatus==="CONFIRMED"}
                         >
                           CONFIRMED ORDER
                           
                         </MenuItem>
                         <MenuItem
-                        disabled={item.orderStatus==="DELIVERED" || item.orderStatus==="SHIPPED"}
+                        disabled={item.orderStatus==="DELIVERED" || item.orderStatus==="REJECTED"}
                           onClick={() => handleShippedOrder(item.id, index)}
                         >
                           SHIPPED ORDER

@@ -1,0 +1,85 @@
+/* AdminLoginForm.css */
+
+/* Base styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Form container */
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("data:image/jpeg;base64,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"); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+    /* Styles the overall form container */
+    .form-container {
+        padding: 3rem;
+        border-radius: 10px;
+        opacity: 0.8; /* Makes the form container transparent */
+        box-shadow: 0 5px 200px rgba(20, 20, 20, 0.15); /* Adds a subtle shadow */
+      }
+      
+  
+  /* Form heading */
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #d80be3; /* Darker blue heading text */
+    font-weight: bold;
+    font-size:30px;
+  }
+  
+  /* Error message */
+  .error {
+    color: #c00; /* Reddish error color */
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Form fields */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #c46f0d; /* Darker blue for labels */
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Light gray background for inputs */
+    box-sizing: border-box;
+    font-size: 16px; /* Increased font size for better readability */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inset shadow */
+  }
+  
+  /* Login button */
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #307bff; /* Blue background */
+    color: #fff; /* White button text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #286090; /* Darker blue on hover */
+  }
+  

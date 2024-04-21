@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Typography } from "@mui/material";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import {
   Grid,
   TextField,
@@ -17,23 +20,23 @@ import { createProduct } from "../../../Redux/Customers/Product/Action";
 
 
 const initialSizes = [
-  { name: "S", quantity: 0 },
-  { name: "M", quantity: 0 },
-  { name: "L", quantity: 0 },
+  { name: "09 AM - 01 PM", quantity: 0 },
+  { name: "02 PM - 06 PM", quantity: 0 },
+  { name: "07 PM - 11 PM", quantity: 0 },
 ];
 
 const CreateProductForm = () => {
   
   const [productData, setProductData] = useState({
     imageUrl: "",
-    brand: "",
+    servicetype: "",
     title: "",
-    color: "",
+  //  color: "",
     discountedPrice: "",
     price: "",
     discountPersent: "",
     size: initialSizes,
-    quantity: "",
+    // quantity: "",
     topLavelCategory: "",
     secondLavelCategory: "",
     thirdLavelCategory: "",
@@ -82,9 +85,19 @@ const jwt=localStorage.getItem("jwt")
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(createProduct({data:productData,jwt}))
-    console.log(productData);
+    console.log('Form submitted');
+    dispatch(createProduct({ data: productData, jwt }))
+      .then(() => {
+        // Product created successfully, show success toast
+        toast.success('Product added successfully');
+      })
+      .catch((error) => {
+        // Failed to add product, show error toast
+        toast.error('Failed to add product');
+        console.error('Error adding product:', error);
+      });
   };
+  
 
   // const handleAddProducts=(data)=>{
   //   for(let item of data){
@@ -122,9 +135,9 @@ const jwt=localStorage.getItem("jwt")
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
-              label="Brand"
-              name="brand"
-              value={productData.brand}
+              label="Service Type"
+              name="servicetype"
+              value={productData.servicetype}
               onChange={handleChange}
             />
           </Grid>
@@ -138,7 +151,7 @@ const jwt=localStorage.getItem("jwt")
               onChange={handleChange}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
               label="Color"
@@ -146,8 +159,8 @@ const jwt=localStorage.getItem("jwt")
               value={productData.color}
               onChange={handleChange}
             />
-          </Grid>
-          <Grid item xs={12} sm={6}>
+          </Grid> */}
+          {/* <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
               label="Quantity"
@@ -156,7 +169,7 @@ const jwt=localStorage.getItem("jwt")
               onChange={handleChange}
               type="number"
             />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} sm={4}>
             <TextField
               fullWidth
@@ -197,7 +210,7 @@ const jwt=localStorage.getItem("jwt")
                 onChange={handleChange}
                 label="Top Level Category"
               >
-                <MenuItem value="men">Men</MenuItem>
+                <MenuItem value="services">service</MenuItem>
                 <MenuItem value="women">Women</MenuItem>
                 <MenuItem value="kids">Kids</MenuItem>
               </Select>
@@ -212,7 +225,7 @@ const jwt=localStorage.getItem("jwt")
                 onChange={handleChange}
                 label="Second Level Category"
               >
-                <MenuItem value="clothing">Clothing</MenuItem>
+                <MenuItem value="electrician">electrician</MenuItem>
                 <MenuItem value="accessories">Accessories</MenuItem>
                 <MenuItem value="brands">Brands</MenuItem>
               </Select>
@@ -227,7 +240,7 @@ const jwt=localStorage.getItem("jwt")
                 onChange={handleChange}
                 label="Third Level Category"
               >
-                <MenuItem value="top">Tops</MenuItem>
+                <MenuItem value="wiring">wiring</MenuItem>
                 <MenuItem value="women_dress">Dresses</MenuItem>
                 <MenuItem value="t-shirts">T-Shirts</MenuItem>
                 <MenuItem value="saree">Saree</MenuItem>
@@ -251,7 +264,7 @@ const jwt=localStorage.getItem("jwt")
             <Grid container item spacing={3} >
               <Grid item xs={12} sm={6}>
                 <TextField
-                  label="Size Name"
+                  label="Time"
                   name="name"
                   value={size.name}
                   onChange={(event) => handleSizeChange(event, index)}
@@ -259,7 +272,7 @@ const jwt=localStorage.getItem("jwt")
                   fullWidth
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              {/* <Grid item xs={12} sm={6}>
                 <TextField
                   label="Quantity"
                   name="size_quantity"
@@ -268,7 +281,8 @@ const jwt=localStorage.getItem("jwt")
                   required
                   fullWidth
                 />
-              </Grid> </Grid>
+              </Grid>  */}
+              </Grid>
             
           ))}
           <Grid item xs={12} >

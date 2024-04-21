@@ -21,25 +21,23 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const initialSizes = [
-  { name: "S", quantity: 0 },
-  { name: "M", quantity: 0 },
-  { name: "L", quantity: 0 },
+  { name: "09 AM - 01 PM", quantity: 0 },
+  { name: "02 PM - 06 PM", quantity: 0 },
+  { name: "07 PM - 11 PM  ", quantity: 0 },
 ];
 
 const UpdateProductForm = () => {
   const [productData, setProductData] = useState({
     imageUrl: "",
-    brand: "",
+    servicetype: "",
     title: "",
-    color: "",
     discountedPrice: "",
     price: "",
     discountPersent: "",
     size: initialSizes,
-    quantity: "",
     topLavelCategory: "",
     secondLavelCategory: "",
-    thirdLavelCategory: "",
+    thirdLavelCategory: "", // Update this to an empty string or one of the available options
     description: "",
   });
   const dispatch = useDispatch();
@@ -94,7 +92,7 @@ const UpdateProductForm = () => {
         sx={{ textAlign: "center" }}
         className="py-10 text-center "
       >
-        Add New Product
+        Update Product
       </Typography>
       <form
         onSubmit={handleSubmit}
@@ -113,9 +111,9 @@ const UpdateProductForm = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
-              label="Brand"
-              name="brand"
-              value={productData.brand}
+              label="Service Type"
+              name="servicetype"
+              value={productData.servicetype}
               onChange={handleChange}
             />
           </Grid>
@@ -129,7 +127,7 @@ const UpdateProductForm = () => {
               onChange={handleChange}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
               label="Color"
@@ -137,7 +135,7 @@ const UpdateProductForm = () => {
               value={productData.color}
               onChange={handleChange}
             />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
@@ -214,14 +212,13 @@ const UpdateProductForm = () => {
               <InputLabel>Third Level Category</InputLabel>
               <Select
                 name="thirdLavelCategory"
-                value={productData.thirdLavelCategory}
+                value={productData.thirdLavelCategory || ""}
                 onChange={handleChange}
                 label="Third Level Category"
               >
                 <MenuItem value="Tops">Tops</MenuItem>
                 <MenuItem value="Dresses">Dresses</MenuItem>
                 <MenuItem value="T-Shirts">T-Shirts</MenuItem>
-                <MenuItem value="Saree">Saree</MenuItem>
                 <MenuItem value="Saree">Saree</MenuItem>
                 <MenuItem value="Lengha Choli">Lengha Choli</MenuItem>
               </Select>

@@ -166,7 +166,7 @@ export default function Navigation() {
                                 {item.name}
                               </a>
                               <p aria-hidden="true" className="mt-1">
-                                Shop now
+                                {/* Shop now */}
                               </p>
                             </div>
                           ))}
@@ -223,6 +223,10 @@ export default function Navigation() {
                     </a>
                   </div>
                 </div>
+
+
+               
+
 
                 <div className="border-t border-gray-200 px-4 py-6">
                   <a href="/" className="-m-2 flex items-center p-2">
@@ -338,7 +342,7 @@ export default function Navigation() {
                                             aria-hidden="true"
                                             className="mt-1"
                                           >
-                                            Shop now
+                                            {/* Shop now */}
                                           </p>
                                         </div>
                                       ))}
@@ -460,6 +464,11 @@ export default function Navigation() {
                     </Button>
                   )}
                 </div>
+
+
+                <Button onClick={()=> navigate("/EmployeeForm")} className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                Register For Employment
+               </Button>
 
                 {/* Search */}
                 <div className="flex lg:ml-6">

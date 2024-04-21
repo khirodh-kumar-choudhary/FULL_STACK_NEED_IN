@@ -26,6 +26,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProduct, findProducts } from "../../../Redux/Customers/Product/Action";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ProductsTable = () => {
   const location = useLocation();
@@ -56,7 +58,7 @@ const ProductsTable = () => {
     // setFilterValue({ availability, category, sort });
     const data = {
       category:category || "",
-      colors: [],
+    
       sizes: [],
       minPrice: 0,
       maxPrice: 100000,
@@ -77,11 +79,20 @@ const ProductsTable = () => {
     navigate({ search: `?${query}` });
   };
 
-  const handleDeleteProduct=(productId)=>{
-    console.log("delete product ",productId)
-    dispatch(deleteProduct(productId))
-  }
-
+  // const handleDeleteProduct=(productId)=>{
+  //   console.log("delete product ",productId)
+  //   dispatch(deleteProduct(productId))
+  // }
+  const handleDeleteProduct = async (productId) => {
+    try {
+      // Assuming deleteProduct returns a promise
+      await dispatch(deleteProduct(productId));
+      toast.success('Product deleted successfully!');
+    } catch (error) {
+      toast.error('Failed to delete product!');
+      console.error('Error deleting product:', error);
+    }
+  };
   return (
     <Box width={"100%"}>
       <Card className="p-3">
@@ -105,7 +116,7 @@ const ProductsTable = () => {
                 onChange={(e) => handleFilterChange(e, "category")}
               >
                 <MenuItem value={"pant"}>Men's Pants</MenuItem>
-                <MenuItem value={"mens_kurta"}>Men's Kurta</MenuItem>
+                <MenuItem value={"wiring"}>Wiring</MenuItem>
                 <MenuItem value={"saree"}>Saree</MenuItem>
                 <MenuItem value={"lengha_choli"}>Lengha Choli</MenuItem>
               </Select>

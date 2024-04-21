@@ -35,7 +35,7 @@ const OrderCard = ({ item, order }) => {
         </Grid>
         <Grid item xs={4}>
           <p className="space-y-2 font-semibold">
-            {order?.orderStatus === "DELIVERED"? (
+            {order?.orderStatus === "EMPLOYE-OUT"? (
              <>
              <FiberManualRecordIcon
                   sx={{ width: "15px", height: "15px" }}
@@ -55,7 +55,7 @@ const OrderCard = ({ item, order }) => {
             
           </p>
           <p className="text-xs">Your Item Has Been Delivered</p>
-          {item.orderStatus === "DELIVERED" && (
+          {item.orderStatus === "EMPLOYE-OUT" && (
             <div
               onClick={() => navigate(`/account/rate/{id}`)}
               className="flex items-center text-blue-600 cursor-pointer"
