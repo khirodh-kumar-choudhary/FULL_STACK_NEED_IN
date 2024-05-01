@@ -1,13 +1,19 @@
 import React from "react";
-
 import { useNavigate } from "react-router-dom";
+
 
 const HomeProductCard = ({ product }) => {
   const navigate = useNavigate();
 
+  const handleClick = () => {
+ 
+    navigate(`/services/${product.secondLavelCategory}/${product.thirdLavelCategory}`);
+
+  };
+  console.log("Product --", product);
   return (
     <div
-      onClick={() => navigate(`/sevices/electrician/wiring`)}
+      onClick={handleClick}
       className="cursor-pointer flex flex-col items-center bg-white rounded-lg shadow-lg overflow-hidden w-[15rem] mx-3"
     >
       <div className="h-[13rem] w-[10rem]">
@@ -18,7 +24,7 @@ const HomeProductCard = ({ product }) => {
         />
       </div>
 
-      <div className="p-4 ">
+      <div className="p-4">
         <h3 className="text-lg font-medium text-gray-900">
           {product?.brand || product?.title}
         </h3>

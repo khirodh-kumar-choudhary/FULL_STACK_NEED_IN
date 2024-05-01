@@ -18,11 +18,11 @@ function Navbar() {
             <Link to="/" className="flex items-center py-6">
               <img
                 src="https://res.cloudinary.com/ddkso1wxi/image/upload/v1675919455/Logo/Copy_of_Zosh_Academy_nblljp.png"
-                alt="Shopwithzosh"
+                alt="NEED IN"
                 className="h-8 w-8 mr-2"
               />
               <span className="font-bold text-white text-lg">
-                Shop With Zosh
+              NEED IN
               </span>
             </Link>
 
@@ -30,52 +30,15 @@ function Navbar() {
             <ul className="hidden md:flex items-center space-x-4">
               <li>
                 <Link
-                  to="/men"
+                  to="/services"
                   className="font-medium text-white hover:text-black"
                 >
-                  Men
+                 Services
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/women"
-                  className="font-medium text-white hover:text-black"
-                >
-                  Women
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/kids"
-                  className="font-medium text-white hover:text-black"
-                >
-                  Kids
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/home-living"
-                  className="font-medium text-white hover:text-black"
-                >
-                  Home & Living
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/beauty"
-                  className="font-medium text-white hover:text-black"
-                >
-                  Beauty
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/offers"
-                  className="font-medium text-white hover:text-black"
-                >
-                  Offers
-                </Link>
-              </li>
+             
+            
+            
             </ul>
 
             {/* Search bar */}
@@ -133,52 +96,15 @@ function Navbar() {
           <ul className="flex flex-col py-4 space-y-2 px-5">
             <li>
               <Link
-                to="/men"
+                to="/services"
                 className="font-medium text-white hover:text-black"
               >
-                Men
+               Services
               </Link>
-            </li>
-            <li>
-              <Link
-                to="/women"
-                className="font-medium text-white hover:text-black"
-              >
-                Women
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/kids"
-                className="font-medium text-white hover:text-black"
-              >
-                Kids
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/home-living"
-                className="font-medium text-white hover:text-black"
-              >
-                Home & Living
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/beauty"
-                className="font-medium text-white hover:text-black"
-              >
-                Beauty
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/offers"
-                className="font-medium text-white hover:text-black"
-              >
-                Offers
-              </Link>
-            </li>
+           </li>
+        
+           
+          
           </ul>
         </div>
       )}

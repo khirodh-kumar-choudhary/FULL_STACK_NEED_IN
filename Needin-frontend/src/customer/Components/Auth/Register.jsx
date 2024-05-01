@@ -35,6 +35,7 @@ useEffect(()=>{
       lastName: data.get("lastName"),
       email: data.get("email"),
       password: data.get("password"),
+      mobile: data.get('mobile')
       
     }
     console.log("user data",userData);
@@ -87,6 +88,19 @@ useEffect(()=>{
               type="password"
             />
           </Grid>
+
+          <Grid item xs={12}>
+            <TextField
+              required
+              id="mobile"
+              name="mobile"
+              label="Mobile(add +91) "
+              fullWidth
+              autoComplete="given-name"
+          
+            />
+          </Grid>
+
 
           <Grid item xs={12}>
             <Button

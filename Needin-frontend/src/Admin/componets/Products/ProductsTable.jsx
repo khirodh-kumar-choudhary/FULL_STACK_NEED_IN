@@ -96,68 +96,8 @@ const ProductsTable = () => {
   return (
     <Box width={"100%"}>
       <Card className="p-3">
-        <CardHeader
-          title="Sort"
-          sx={{
-            pt: 0,
-            alignItems: "center",
-            "& .MuiCardHeader-action": { mt: 0.6 },
-          }}
-        />
-        <Grid container spacing={2}>
-          <Grid item xs={4}>
-            <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Category</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={filterValue.category}
-                label="Category"
-                onChange={(e) => handleFilterChange(e, "category")}
-              >
-                <MenuItem value={"pant"}>Men's Pants</MenuItem>
-                <MenuItem value={"wiring"}>Wiring</MenuItem>
-                <MenuItem value={"saree"}>Saree</MenuItem>
-                <MenuItem value={"lengha_choli"}>Lengha Choli</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
-          <Grid item xs={4}>
-            <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">
-                Availability
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={filterValue.availability}
-                label="Availability"
-                onChange={(e) => handleFilterChange(e, "availability")}
-              >
-                <MenuItem value={"All"}>All</MenuItem>
-                <MenuItem value={"in_stock"}>Instock</MenuItem>
-                <MenuItem value={"out_of_stock"}>Out Of Stock</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
-          <Grid item xs={4}>
-            <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">
-                Sort By Price
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={filterValue.sort}
-                label="Sort By Price"
-                onChange={(e) => handleFilterChange(e, "sort")}
-              >
-                <MenuItem value={"price_high"}>Heigh - Low</MenuItem>
-                <MenuItem value={"price_low"}>Low - Heigh</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
-        </Grid>
+        
+      
       </Card>
       <Card className="mt-2">
         <CardHeader
@@ -176,7 +116,7 @@ const ProductsTable = () => {
                 <TableCell>Title</TableCell>
                 <TableCell sx={{ textAlign: "center" }}>Category</TableCell>
                 <TableCell sx={{ textAlign: "center" }}>Price</TableCell>
-                <TableCell sx={{ textAlign: "center" }}>Quantity</TableCell>
+            
                 <TableCell sx={{ textAlign: "center" }}>Update</TableCell>
                 <TableCell sx={{ textAlign: "center" }}>Delete</TableCell>
               </TableRow>
@@ -211,7 +151,7 @@ const ProductsTable = () => {
                   </TableCell>
                   <TableCell sx={{ textAlign: "center" }}>{item.category.name}</TableCell>
                   <TableCell sx={{ textAlign: "center" }}>{item.discountedPrice}</TableCell>
-                  <TableCell sx={{ textAlign: "center" }}>{item.quantity}</TableCell>
+                
                   <TableCell sx={{ textAlign: "center" }}>
                     <Button onClick={()=>navigate(`/admin/product/update/${item.id}`)} variant="text">Update</Button>
                   </TableCell>

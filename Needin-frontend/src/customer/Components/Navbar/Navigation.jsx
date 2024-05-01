@@ -270,7 +270,7 @@ export default function Navigation() {
                   <span className="sr-only"></span>
                   <img
                     src="https://res.cloudinary.com/dq99eqoql/image/upload/v1712485910/main-logo-need-in_vskqlr.png"
-                    alt="Shopwithzosh"
+                    alt="NEEDIN"
                     className="h-18 w-16 mr-6"
                   />
                 </Link>

@@ -186,9 +186,8 @@ const UpdateProductForm = () => {
                 onChange={handleChange}
                 label="Top Level Category"
               >
-                <MenuItem value="Men">Men</MenuItem>
-                <MenuItem value="Women">Women</MenuItem>
-                <MenuItem value="Kids">Kids</MenuItem>
+                <MenuItem value="services">Services</MenuItem>
+          
               </Select>
             </FormControl>
           </Grid>
@@ -201,9 +200,9 @@ const UpdateProductForm = () => {
                 onChange={handleChange}
                 label="Second Level Category"
               >
-                <MenuItem value="Clothing">Clothing</MenuItem>
-                <MenuItem value="Accessories">Accessories</MenuItem>
-                <MenuItem value="Brands">Brands</MenuItem>
+                <MenuItem value="electrician">Electrician</MenuItem>
+                <MenuItem value="automobile">Automobile</MenuItem>
+                
               </Select>
             </FormControl>
           </Grid>
@@ -216,11 +215,11 @@ const UpdateProductForm = () => {
                 onChange={handleChange}
                 label="Third Level Category"
               >
-                <MenuItem value="Tops">Tops</MenuItem>
-                <MenuItem value="Dresses">Dresses</MenuItem>
-                <MenuItem value="T-Shirts">T-Shirts</MenuItem>
-                <MenuItem value="Saree">Saree</MenuItem>
-                <MenuItem value="Lengha Choli">Lengha Choli</MenuItem>
+                <MenuItem value="wiring">wiring</MenuItem>
+                <MenuItem value="fan">fan</MenuItem>
+                <MenuItem value="engine">Engine</MenuItem>
+
+               
               </Select>
             </FormControl>
           </Grid>

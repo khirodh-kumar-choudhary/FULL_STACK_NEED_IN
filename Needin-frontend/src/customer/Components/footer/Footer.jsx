@@ -1,89 +1,87 @@
-import { Grid, Link, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
+import { Facebook, Instagram, LinkedIn, Twitter } from '@mui/icons-material';
 
 const Footer = () => {
   return (
-    <Grid className='bg-black text-white mt-10 text-center' container color={'white' } sx={{ bgcolor: 'black', color: 'white', py: 3 }}>
-      <Grid  item xs={12} sm={6} md={3}>
+    <Grid className='bg-black text-white mt-10 text-center' container sx={{ bgcolor: 'black', color: 'white', py: 3 }}>
+      <Grid item xs={12} sm={6} md={3}>
         <Typography className='pb-5' variant="h6" gutterBottom>
           Company
         </Typography>
         <Typography variant="body2" component="p" gutterBottom>
-          About
+          About Us
+        </Typography>
+        <Typography variant="body2" component="p" gutterBottom>
+          Terms & Conditions
+        </Typography>
+        <Typography variant="body2" component="p" gutterBottom>
+          Our Services
+        </Typography>
+        <Typography variant="body2" component="p" gutterBottom>
+          Privacy Policy
+        </Typography>
+        <Typography variant="body2" component="p" gutterBottom>
+          IN Impact
+        </Typography>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Typography className='pb-5' variant="h6" gutterBottom>
+          For Customers
+        </Typography>
+        <Typography variant="body2" component="p" gutterBottom>
+          User Review
+        </Typography>
+        <Typography variant="body2" component="p" gutterBottom>
+          Categores Near You
         </Typography>
         <Typography variant="body2" component="p" gutterBottom>
           Blog
         </Typography>
         <Typography variant="body2" component="p" gutterBottom>
-          Jobs
+          Need Help
         </Typography>
         <Typography variant="body2" component="p" gutterBottom>
-          Press
-        </Typography>
-        <Typography variant="body2" component="p" gutterBottom>
-          Partners
+          Contact Us
         </Typography>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Typography className='pb-5' variant="h6" gutterBottom>
-          Solutions
+          For Partners
         </Typography>
         <Typography variant="body2" component="p" gutterBottom>
-          Marketing
+          Register as an Employee
         </Typography>
         <Typography variant="body2" component="p" gutterBottom>
-          Analytics
-        </Typography>
-        <Typography variant="body2" component="p" gutterBottom>
-          Commerce
-        </Typography>
-        <Typography variant="body2" component="p" gutterBottom>
-          Insights
-        </Typography>
-        <Typography variant="body2" component="p" gutterBottom>
-          Support
+          Employee Conditions
         </Typography>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
-        <Typography className='pb-5' variant="h6" gutterBottom>
-          Documentation
-        </Typography>
-        <Typography variant="body2" component="p" gutterBottom>
-          Guides
-        </Typography>
-        <Typography variant="body2" component="p" gutterBottom>
-          API Status
-        </Typography>
-      </Grid>
-      <Grid item xs={12} sm={6} md={3}>
-        <Typography className='pb-5' variant="h6" gutterBottom>
-          Legal
-        </Typography>
-        <Typography variant="body2" component="p" gutterBottom>
-          Claim
-        </Typography>
-        <Typography variant="body2" component="p" gutterBottom>
-          Privacy
-        </Typography>
-        <Typography variant="body2" component="p" gutterBottom>
-          Terms
-        </Typography>
+        <Grid container direction="column" alignItems="center">
+          <Typography className='pb-5' variant="h6" gutterBottom>
+            Social Links
+          </Typography>
+          <Grid container spacing={2} justifyContent="center">
+            <Grid item>
+              <Facebook fontSize="large" />
+            </Grid>
+            <Grid item>
+              <Instagram fontSize="large" />
+            </Grid>
+            <Grid item>
+              <LinkedIn fontSize="large" />
+            </Grid>
+            <Grid item>
+              <Twitter fontSize="large" />
+            </Grid>
+          </Grid>
+        </Grid>
       </Grid>
       <Grid className='pt-20' item xs={12} >
         <Typography variant="body2" component="p" align="center">
-          &copy; 2023 My Company. All rights reserved.
+          &copy; 2024. All rights Need In Team.
         </Typography>
         <Typography variant="body2" component="p" align="center">
-          Made with love by Me.
-        </Typography>
-        <Typography variant="body2" component="p" align="center">
-          Icons made by{' '}
-          <Link href="https://www.freepik.com" color="inherit" underline="always">
-            Freepik
-          </Link>{' '}
-          from{' '}
-          <Link href="https://www.flaticon.com/" color="inherit" underline="always">
-            www.flaticon.com
-          </Link>
+          Made with love by TEAM NEED IN.
         </Typography>
       </Grid>
     </Grid>

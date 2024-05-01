@@ -21,70 +21,70 @@ const SalesOverTime = () => {
   const theme = useTheme()
 
   const options = {
-    chart: {
-      parentHeightOffset: 0,
-      toolbar: { show: false }
-    },
-    plotOptions: {
-      bar: {
-        borderRadius: 9,
-        distributed: true,
-        columnWidth: '40%',
-        endingShape: 'rounded',
-        startingShape: 'rounded'
-      }
-    },
-    stroke: {
-      width: 2,
-      colors: [theme.palette.background.paper]
-    },
-    legend: { show: false },
-    grid: {
-      strokeDashArray: 7,
-      padding: {
-        top: -1,
-        right: 0,
-        left: -12,
-        bottom: 5
-      }
-    },
-    dataLabels: { enabled: false },
-    colors: [
-      theme.palette.background.default,
-      theme.palette.background.default,
-      theme.palette.background.default,
-      theme.palette.primary.main,
-      theme.palette.background.default,
-      theme.palette.background.default
-    ],
-    states: {
-      hover: {
-        filter: { type: 'none' }
-      },
-      active: {
-        filter: { type: 'none' }
-      }
-    },
-    xaxis: {
-      categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-      tickPlacement: 'on',
-      labels: { show: false },
-      axisTicks: { show: false },
-      axisBorder: { show: false }
-    },
-    yaxis: {
-      show: true,
-      tickAmount: 4,
-      labels: {
-        offsetX: -17,
-        formatter: value => `${value > 999 ? `${(value / 1000).toFixed(0)}` : value}k`
-      }
-    }
+    // chart: {
+    //   parentHeightOffset: 0,
+    //   toolbar: { show: false }
+    // },
+    // plotOptions: {
+    //   bar: {
+    //     borderRadius: 9,
+    //     distributed: true,
+    //     columnWidth: '40%',
+    //     endingShape: 'rounded',
+    //     startingShape: 'rounded'
+    //   }
+    // },
+    // stroke: {
+    //   width: 2,
+    //   colors: [theme.palette.background.paper]
+    // },
+    // legend: { show: false },
+    // grid: {
+    //   strokeDashArray: 7,
+    //   padding: {
+    //     top: -1,
+    //     right: 0,
+    //     left: -12,
+    //     bottom: 5
+    //   }
+    // },
+    // dataLabels: { enabled: false },
+    // colors: [
+    //   theme.palette.background.default,
+    //   theme.palette.background.default,
+    //   theme.palette.background.default,
+    //   theme.palette.primary.main,
+    //   theme.palette.background.default,
+    //   theme.palette.background.default
+    // ],
+    // states: {
+    //   hover: {
+    //     filter: { type: 'none' }
+    //   },
+    //   active: {
+    //     filter: { type: 'none' }
+    //   }
+    // },
+    // xaxis: {
+    //   categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    //   tickPlacement: 'on',
+    //   labels: { show: false },
+    //   axisTicks: { show: false },
+    //   axisBorder: { show: false }
+    // },
+    // yaxis: {
+    //   show: true,
+    //   tickAmount: 4,
+    //   labels: {
+    //     offsetX: -17,
+    //     formatter: value => `${value > 999 ? `${(value / 1000).toFixed(0)}` : value}k`
+    //   }
+    // }
   }
 
   return (
     <Card>
-      <CardHeader
+      {/* <CardHeader
         title='Sales Over Time'
         titleTypographyProps={{
           sx: { lineHeight: '0.5rem !important', letterSpacing: '0.15px !important' }
@@ -106,7 +106,7 @@ const SalesOverTime = () => {
         <Button fullWidth variant='contained'>
           Details
         </Button>
-      </CardContent>
+      </CardContent> */}
     </Card>
   )
 }

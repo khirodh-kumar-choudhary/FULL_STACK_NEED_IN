@@ -99,15 +99,15 @@ const jwt=localStorage.getItem("jwt")
   };
   
 
-  // const handleAddProducts=(data)=>{
-  //   for(let item of data){
-  //     const productsData={
-  //       data:item,
-  //       jwt,
-  //     }
-  //     dispatch(createProduct(productsData))
-  //   }
-  // }
+  const handleAddProducts=(data)=>{
+    for(let item of data){
+      const productsData={
+        data:item,
+        jwt,
+      }
+      dispatch(createProduct(productsData))
+    }
+  }
 
   return (
     <Fragment className="createProductContainer ">
@@ -211,8 +211,7 @@ const jwt=localStorage.getItem("jwt")
                 label="Top Level Category"
               >
                 <MenuItem value="services">service</MenuItem>
-                <MenuItem value="women">Women</MenuItem>
-                <MenuItem value="kids">Kids</MenuItem>
+              
               </Select>
             </FormControl>
           </Grid>
@@ -226,8 +225,7 @@ const jwt=localStorage.getItem("jwt")
                 label="Second Level Category"
               >
                 <MenuItem value="electrician">electrician</MenuItem>
-                <MenuItem value="accessories">Accessories</MenuItem>
-                <MenuItem value="brands">Brands</MenuItem>
+                <MenuItem value="automobile">Automobile</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -241,10 +239,8 @@ const jwt=localStorage.getItem("jwt")
                 label="Third Level Category"
               >
                 <MenuItem value="wiring">wiring</MenuItem>
-                <MenuItem value="women_dress">Dresses</MenuItem>
-                <MenuItem value="t-shirts">T-Shirts</MenuItem>
-                <MenuItem value="saree">Saree</MenuItem>
-                <MenuItem value="lengha_choli">Lengha Choli</MenuItem>
+                <MenuItem value="fan">fan</MenuItem>
+                <MenuItem value="engine">Engine</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -272,16 +268,7 @@ const jwt=localStorage.getItem("jwt")
                   fullWidth
                 />
               </Grid>
-              {/* <Grid item xs={12} sm={6}>
-                <TextField
-                  label="Quantity"
-                  name="size_quantity"
-                  type="number"
-                  onChange={(event) => handleSizeChange(event, index)}
-                  required
-                  fullWidth
-                />
-              </Grid>  */}
+
               </Grid>
             
           ))}
@@ -295,15 +282,6 @@ const jwt=localStorage.getItem("jwt")
             >
               Add New Product
             </Button>
-            {/* <Button
-              variant="contained"
-              sx={{ p: 1.8 }}
-              className="py-20 ml-10"
-              size="large"
-              onClick={()=>handleAddProducts(dressPage1)}
-            >
-              Add Products By Loop
-            </Button> */}
           </Grid>
         </Grid>
       </form>

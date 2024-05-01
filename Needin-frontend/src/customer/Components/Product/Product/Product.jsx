@@ -331,24 +331,26 @@ export default function Product() {
 
           <section aria-labelledby="products-heading" className="pb-24 pt-6">
             <h2 id="products-heading" className="sr-only">
-              Products
+              Services
             </h2>
 
             <div>
-              <h2 className="py-5 font-semibold opacity-60 text-lg">Filters</h2>
+              <h2 className="py-5 font-semibold opacity-60 text-lg">Services</h2>
               <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
                 {/* Filters */}
-                <form className="hidden lg:block border rounded-md p-5">
+                <form 
+                // className="hidden lg:block border rounded-md p-5"
+                >
                   {filters.map((section) => (
                     <Disclosure
                       // defaultOpen={false}
                       as="div"
                       key={section.id}
-                      className="border-b border-gray-200 py-6"
+                      // className="border-b border-gray-200 py-6"
                     >
                       {({ open }) => (
                         <>
-                          <h3 className="-my-3 flow-root">
+                          {/* <h3 className="-my-3 flow-root">
                             <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                               <span className="font-medium text-gray-900">
                                 {section.name}
@@ -395,7 +397,7 @@ export default function Product() {
                                 </div>
                               ))}
                             </div>
-                          </Disclosure.Panel>
+                          </Disclosure.Panel> */}
                         </>
                       )}
                     </Disclosure>
@@ -405,11 +407,11 @@ export default function Product() {
                       // defaultOpen={true}
                       as="div"
                       key={section.id}
-                      className="border-b border-gray-200 py-6"
+                      // className="border-b border-gray-200 py-6"
                     >
                       {({ open }) => (
                         <>
-                          <h3 className="-my-3 flow-root">
+                          {/* <h3 className="-my-3 flow-root">
                             <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                               <span className="font-medium text-gray-900">
                                 {section.name}
@@ -448,7 +450,7 @@ export default function Product() {
                                 ))}
                               </RadioGroup>
                             </FormControl>
-                          </Disclosure.Panel>
+                          </Disclosure.Panel> */}
                         </>
                       )}
                     </Disclosure>
@@ -480,16 +482,8 @@ export default function Product() {
           </div>
         </section>
 
-        {/* {backdrop} */}
-        <section>
-          <Backdrop
-            sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
-            open={isLoaderOpen}
-            onClick={handleLoderClose}
-          >
-            <CircularProgress color="inherit" />
-          </Backdrop>
-        </section>
+      
+       
       </div>
     </div>
   );

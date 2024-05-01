@@ -16,37 +16,37 @@ import CellphoneLink from 'mdi-material-ui/CellphoneLink'
 import AccountOutline from 'mdi-material-ui/AccountOutline'
 
 const salesData = [
-  {
-    stats: '245k',
-    title: 'Sales',
-    color: 'primary',
-    icon: <TrendingUp sx={{ fontSize: '1.75rem' }} />
-  },
-  {
-    stats: '12.5k',
-    title: 'Customers',
-    color: 'success',
-    icon: <AccountOutline sx={{ fontSize: '1.75rem' }} />
-  },
-  {
-    stats: '1.54k',
-    color: 'warning',
-    title: 'Products',
-    icon: <CellphoneLink sx={{ fontSize: '1.75rem' }} />
-  },
-  {
-    stats: '$88k',
-    color: 'info',
-    title: 'Revenue',
-    icon: <CurrencyUsd sx={{ fontSize: '1.75rem' }} />
-  }
+  // {
+  //   stats: '245k',
+  //   title: 'Sales',
+  //   color: 'primary',
+  //   icon: <TrendingUp sx={{ fontSize: '1.75rem' }} />
+  // },
+  // {
+  //   stats: '12.5k',
+  //   title: 'Customers',
+  //   color: 'success',
+  //   icon: <AccountOutline sx={{ fontSize: '1.75rem' }} />
+  // },
+  // {
+  //   stats: '1.54k',
+  //   color: 'warning',
+  //   title: 'Products',
+  //   icon: <CellphoneLink sx={{ fontSize: '1.75rem' }} />
+  // },
+  // {
+  //   stats: '$88k',
+  //   color: 'info',
+  //   title: 'Revenue',
+  //   icon: <CurrencyUsd sx={{ fontSize: '1.75rem' }} />
+  // }
 ]
 
 const renderStats = () => {
   return salesData.map((item, index) => (
     <Grid item xs={12} sm={3} key={index}>
       <Box key={index} sx={{ display: 'flex', alignItems: 'center' }}>
-        <Avatar
+        {/* <Avatar
           variant='rounded'
           sx={{
             mr: 3,
@@ -58,10 +58,10 @@ const renderStats = () => {
           }}
         >
           {item.icon}
-        </Avatar>
+        </Avatar> */}
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-          <Typography variant='caption'>{item.title}</Typography>
-          <Typography variant='h6'>{item.stats}</Typography>
+          {/* <Typography variant='caption'>{item.title}</Typography>
+          <Typography variant='h6'>{item.stats}</Typography> */}
         </Box>
       </Box>
     </Grid>
@@ -71,7 +71,7 @@ const renderStats = () => {
 const MonthlyOverview = () => {
   return (
     <Card>
-      <CardHeader
+      {/* <CardHeader
         title='Monthly Overview'
         action={
           <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>
@@ -98,7 +98,7 @@ const MonthlyOverview = () => {
         <Grid container spacing={[5, 0]}>
           {renderStats()}
         </Grid>
-      </CardContent>
+      </CardContent> */}
     </Card>
   )
 }

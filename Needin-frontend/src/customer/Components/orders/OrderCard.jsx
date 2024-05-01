@@ -24,7 +24,7 @@ const OrderCard = ({ item, order }) => {
             <div className="ml-5">
               <p className="mb-2">{item?.product.title}</p>
               <p className="opacity-50 text-xs font-semibold space-x-5">
-                <span>Size: {item?.size}</span>
+              
               </p>
             </div>
           </div>
@@ -50,18 +50,18 @@ const OrderCard = ({ item, order }) => {
                 sx={{ width: "15px", height: "15px" }}
                 className="text-green-600 p-0 mr-2 text-sm"
               />
-              <span>Expected Delivery On Mar 03</span>
+              <span>Expected Delivery within your mentioned time</span>
               </>}
             
           </p>
-          <p className="text-xs">Your Item Has Been Delivered</p>
+          {/* <p className="text-xs">Your Service Has Been Completed</p> */}
           {item.orderStatus === "EMPLOYE-OUT" && (
             <div
               onClick={() => navigate(`/account/rate/{id}`)}
               className="flex items-center text-blue-600 cursor-pointer"
             >
               <StarIcon sx={{ fontSize: "2rem" }} className="px-2 text-5xl" />
-              <span>Rate & Review Product</span>
+              <span>Rate & Review Service</span>
             </div>
           )}
         </Grid>

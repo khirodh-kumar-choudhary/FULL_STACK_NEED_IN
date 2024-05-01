@@ -95,20 +95,20 @@ const withdrawData = [
 
 // Styled Divider component
 const Divider = styled(MuiDivider)(({ theme }) => ({
-  margin: theme.spacing(5, 0),
-  borderRight: `1px solid ${theme.palette.divider}`,
-  [theme.breakpoints.down('md')]: {
-    borderRight: 'none',
-    margin: theme.spacing(0, 5),
-    borderBottom: `1px solid ${theme.palette.divider}`
-  }
+//   margin: theme.spacing(5, 0),
+//   borderRight: `1px solid ${theme.palette.divider}`,
+//   [theme.breakpoints.down('md')]: {
+//     borderRight: 'none',
+//     margin: theme.spacing(0, 5),
+//     borderBottom: `1px solid ${theme.palette.divider}`
+//   }
 }))
 
 const DepositWithdraw = () => {
   return (
     <Card sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: ['column', 'column', 'row'] }}>
       <Box sx={{ width: '100%' }}>
-        <CardHeader
+        {/* <CardHeader
           title='Deposit'
           sx={{ pt: 5.5, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
           action={<Typography variant='caption'>View All</Typography>}
@@ -116,8 +116,8 @@ const DepositWithdraw = () => {
             variant: 'h6',
             sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' }
           }}
-        />
-        <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
+        /> */}
+        {/* <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
           {depositData.map((item, index) => {
             return (
               <Box
@@ -148,13 +148,13 @@ const DepositWithdraw = () => {
               </Box>
             )
           })}
-        </CardContent>
+        </CardContent> */}
       </Box>
 
       <Divider flexItem />
 
       <Box sx={{ width: '100%' }}>
-        <CardHeader
+        {/* <CardHeader
           title='Withdraw'
           sx={{ pt: 5.5, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
           action={<Typography variant='caption'>View All</Typography>}
@@ -162,8 +162,8 @@ const DepositWithdraw = () => {
             variant: 'h6',
             sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' }
           }}
-        />
-        <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
+        /> */}
+        {/* <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
           {withdrawData.map((item, index) => {
             return (
               <Box
@@ -194,7 +194,7 @@ const DepositWithdraw = () => {
               </Box>
             )
           })}
-        </CardContent>
+        </CardContent> */}
       </Box>
     </Card>
   )

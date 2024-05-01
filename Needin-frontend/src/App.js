@@ -9,6 +9,7 @@ import AdminLoginForm from './Admin/Views/AdminLoginForm';
 import EmployeeRegistration from './customer/Components/EmployeeRegistration/EmployeeRegistration';
 import Employeedashboard from './customer/Components/EmployeeRegistration/Employeedashboard';
 import { ToastContainer } from 'react-toastify';
+import LoginPage from './customer/Components/EmployeeRegistration/EmploginPage';
 // import Routers from './Routers/Routers';
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
       <Routes>
         <Route path="/*" element={<CustomerRoutes />} />
         <Route path="/admin/*" element={<AdminPannel />} />
-        <Route path="/EmployeeForm" element={<EmployeeRegistration/>} />
+        <Route path="/EmployeeForm" element={<LoginPage/>} />
+        <Route path="/EmployeeRegisterForm" element={<EmployeeRegistration/>} />
+        
         <Route path="/Employee" element={<Employeedashboard/>} />
         <Route path="/adminpan/*" element={<AdminLoginForm />} />
         

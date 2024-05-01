@@ -32,12 +32,12 @@ const drawerWidth = 240;
 
 const menu = [
   {name:"Dashboard",path:"/admin"},
-  {name:"Products",path:"/admin/products"},
-  {name:"Customers",path:"/admin/customers"},
-  {name:"Orders",path:"/admin/orders"},
+  {name:"Services",path:"/admin/products"},
+  {name:"Users",path:"/admin/customers"},
+  {name:"Service Orders",path:"/admin/orders"},
   {name:"Total Earnings",path:"/admin"},
-  {name:"Weekly Overview",path:"/admin"},
-  {name:"Monthly Overview",path:"/admin"},
+  // {name:"Weekly Overview",path:"/admin"},
+  // {name:"Monthly Overview",path:"/admin"},
   {name:"Add Product",path:"/admin/product/create"},
 ];
 
