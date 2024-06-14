@@ -49,5 +49,15 @@ public class JwtTokenProvider {
 		}
 		return String.join(",",auths);
 	}
+	public String generateToken(String email) {
+	    String jwt = Jwts.builder()
+	            .setIssuedAt(new Date())
+	            .setExpiration(new Date(new Date().getTime() + 86400000))
+	            .claim("email", email)
+	            .signWith(key)
+	            .compact();
+
+	    return jwt;
+	}
 
 }

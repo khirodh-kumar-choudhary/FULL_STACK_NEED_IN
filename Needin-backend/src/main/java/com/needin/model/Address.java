@@ -33,6 +33,14 @@ public class Address {
 
     @Column(name = "state")
     private String state;
+    
+    
+    @Column(name = "userlatitude")
+    private String userlatitude;
+    
+    
+    @Column(name = "userlongitude")
+    private String userlongitude;
 
     @Column(name = "zip_code")
     private String zipCode;
@@ -47,8 +55,11 @@ public class Address {
 	public Address() {
 		
 	}
+	
+
+
 	public Address(Long id, String firstName, String lastName, String streetAddress, String city, String state,
-			String zipCode, User user, String mobile) {
+			String userlatitude, String userlongitude, String zipCode, User user, String mobile) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -56,15 +67,13 @@ public class Address {
 		this.streetAddress = streetAddress;
 		this.city = city;
 		this.state = state;
+		this.userlatitude = userlatitude;
+		this.userlongitude = userlongitude;
 		this.zipCode = zipCode;
 		this.user = user;
 		this.mobile = mobile;
 	}
 
-
-	public String getFirstName() {
-		return firstName;
-	}
 
 
 	public Long getId() {
@@ -72,19 +81,17 @@ public class Address {
 	}
 
 
+
 	public void setId(Long id) {
 		this.id = id;
 	}
 
 
-	public User getUser() {
-		return user;
+
+	public String getFirstName() {
+		return firstName;
 	}
 
-
-	public void setUser(User user) {
-		this.user = user;
-	}
 
 
 	public void setFirstName(String firstName) {
@@ -92,9 +99,11 @@ public class Address {
 	}
 
 
+
 	public String getLastName() {
 		return lastName;
 	}
+
 
 
 	public void setLastName(String lastName) {
@@ -102,9 +111,11 @@ public class Address {
 	}
 
 
+
 	public String getStreetAddress() {
 		return streetAddress;
 	}
+
 
 
 	public void setStreetAddress(String streetAddress) {
@@ -112,9 +123,11 @@ public class Address {
 	}
 
 
+
 	public String getCity() {
 		return city;
 	}
+
 
 
 	public void setCity(String city) {
@@ -122,9 +135,11 @@ public class Address {
 	}
 
 
+
 	public String getState() {
 		return state;
 	}
+
 
 
 	public void setState(String state) {
@@ -132,9 +147,35 @@ public class Address {
 	}
 
 
+
+	public String getUserlatitude() {
+		return userlatitude;
+	}
+
+
+
+	public void setUserlatitude(String userlatitude) {
+		this.userlatitude = userlatitude;
+	}
+
+
+
+	public String getUserlongitude() {
+		return userlongitude;
+	}
+
+
+
+	public void setUserlongitude(String userlongitude) {
+		this.userlongitude = userlongitude;
+	}
+
+
+
 	public String getZipCode() {
 		return zipCode;
 	}
+
 
 
 	public void setZipCode(String zipCode) {
@@ -142,15 +183,30 @@ public class Address {
 	}
 
 
+
+	public User getUser() {
+		return user;
+	}
+
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+
 	public String getMobile() {
 		return mobile;
 	}
 
 
+
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
-    
+
+
     
 
 }

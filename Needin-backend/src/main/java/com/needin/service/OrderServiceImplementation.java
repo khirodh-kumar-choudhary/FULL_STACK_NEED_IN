@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.needin.exception.OrderException;
@@ -42,7 +43,7 @@ public class OrderServiceImplementation implements OrderService {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
+	@Autowired
 	public OrderServiceImplementation(OrderRepository orderRepository,CartService cartService,
 			AddressRepository addressRepository,UserRepository userRepository,
 			OrderItemService orderItemService,OrderItemRepository orderItemRepository) {
